@@ -1,0 +1,49 @@
+@use "../Base/color" as color;
+
+.btn-landing-page {
+  padding: 25px 35px;
+  border: none;
+  background-color: color.$secondary-color;
+  color: white;
+  font-family: Courier New;
+
+  &:hover {
+    color: white;
+    background-color: color.$secondary-color-darker;
+  }
+}
+
+.btn-submit-Newsletter {
+  background-color: color.$primary-color;
+  border: 5px solid color.$white-color;
+  padding: 6px 15px;
+  font-size: small;
+  color: color.$white-color;
+  outline: none;
+
+  &:hover {
+    color: color.$white-color;
+    background-color: color.$primary-color-lighter;
+    border: 5px solid color.$white-color;
+  }
+}
+
+.btn-submit-contact {
+  background-color: color.$primary-color;
+  float: right;
+  padding: 10px 17px;
+
+  &:hover {
+    background-color: color.$primary-color-lighter;
+    color: color.$white-color;
+  }
+}
+
+.btn-submit-auth {
+  background-color: color.$primary-color;
+  padding: 15px 0;
+
+  &:hover {
+    background-color: color.$primary-color-lighter;
+  }
+}

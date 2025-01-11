@@ -1,0 +1,8 @@
+@use "./blog/home" as home;
+@use "./blog/about" as about;
+@use "./blog/clinet" as client;
+@use "./blog/Services" as services;
+@use "./blog/team" as team;
+@use "./blog/contact" as contact;
+
+@use "./authentication/authpage" as authpage;

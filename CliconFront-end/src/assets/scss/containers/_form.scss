@@ -1,0 +1,22 @@
+@use "../Base/color" as color;
+
+.auth {
+  .container-google-auth {
+    border: 1px solid color.$light-color;
+    padding: 10px;
+    height: 50px;
+
+    &:hover {
+      background-color: color.$primary-color-lighter;
+      color: color.$white-color;
+    }
+  }
+
+  .auth-link {
+    text-decoration: underline;
+  }
+
+  .text-forgot-password {
+    color: color.$primary-color-lighter;
+  }
+}

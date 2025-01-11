@@ -1,0 +1,40 @@
+.container-items-about {
+  width: 100vw;
+  .container- {
+    .--grid {
+      .left-container-about_page {
+        .mini-breacrumb {
+          padding-left: 15%;
+          font-size: small;
+
+          @media only screen and (max-width: 780px) {
+            padding-left: 7%;
+          }
+
+          a {
+            .text-dark {
+              color: black;
+              font-weight: 600;
+            }
+          }
+        }
+
+        article {
+          padding-top: 80px;
+          padding-left: 15%;
+          margin-top: -50px;
+          font-size: 17px;
+
+          @media only screen and (max-width: 780px) {
+            padding-left: 7%;
+          }
+        }
+      }
+      .right-container-about_page {
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

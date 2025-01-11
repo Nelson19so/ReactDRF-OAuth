@@ -1,0 +1,22 @@
+@use "../../Base/color" as color;
+
+.container-client {
+  .container {
+    .container-grid {
+      .container-inner-grid {
+        .container-holder {
+          transition: 1s;
+
+          h1 {
+            font-weight: 700;
+          }
+
+          &:hover {
+            background-color: color.$secondary-color;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}

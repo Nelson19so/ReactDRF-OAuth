@@ -1,0 +1,20 @@
+.contact-page {
+  .container {
+    .mini-breacrumb {
+      font-size: small;
+    }
+    .grid-contact {
+      .grid-item {
+        .container {
+          overflow: hidden;
+
+          .container-items {
+            p {
+              font-size: smaller;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use "../Base/color" as color;
+
+.input-subscribe {
+  width: 100%;
+  padding: 24px 15px;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+
+.contact-input {
+  border: none;
+  padding: 20px 20px;
+  background-color: color.$white-smoke-color;
+  font-size: small;
+}
+
+.container-text-area {
+  .contact-text-area {
+    height: 200px;
+    padding: 2% 3%;
+  }
+}
+
+.search-navbar-btn {
+  font-size: small;
+}
+
+.input-auth {
+  width: 100%;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  padding: 10px 0;
+  border-bottom: 1px solid color.$light-color;
+  outline: none;
+  font-size: small;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid color.$primary-color-lighter;
+  }
+}

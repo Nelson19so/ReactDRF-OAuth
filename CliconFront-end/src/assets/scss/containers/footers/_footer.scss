@@ -1,0 +1,77 @@
+@use "../../Base/color" as color;
+
+.container-footer {
+  bottom: 0;
+  width: 100vw;
+  font-family: Monaco;
+
+  .container-- {
+    .top-container {
+      width: 100%;
+      background-color: color.$secondary-color-darker;
+
+      center {
+        p {
+          padding: 0 30%;
+        }
+      }
+    }
+    .center-container {
+      background-color: color.$black-color;
+      border-bottom: 1px solid color.$gray;
+
+      .grid-newsletter {
+        .grid-inner-item {
+          font-size: 15px;
+
+          .p-tags {
+            font-size: smaller;
+            float: left;
+            margin: 5px;
+            color: color.$gray;
+
+            &:hover {
+              background-color: color.$gray-two;
+              color: color.$white-color;
+            }
+          }
+
+          .last-item {
+            font-size: small;
+          }
+
+          .download--link {
+            background-color: color.$gray-extral-light;
+
+            p {
+              font-size: small;
+
+              p {
+                font-family: "Times New Roman", Times, serif;
+                font-size: larger;
+              }
+            }
+          }
+
+          h1 {
+            strong {
+              font-size: 60px;
+              margin-bottom: 8%;
+            }
+          }
+
+          ul {
+            li {
+              list-style: none;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom-container {
+      background-color: color.$black-color;
+    }
+  }
+}
