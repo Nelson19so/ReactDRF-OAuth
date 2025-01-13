@@ -1,2 +1,2 @@
 # CliconEcommerceWeb
-Clicon E-commerce website using React and Django-rest-framework
+Clicon E-commerce website still under construction at the moment. 
