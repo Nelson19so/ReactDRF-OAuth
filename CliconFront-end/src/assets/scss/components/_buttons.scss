@@ -47,3 +47,100 @@
     background-color: color.$primary-color-lighter;
   }
 }
+
+.btn-search {
+  background-color: color.$white-color;
+
+  &:hover {
+    background-color: color.$white-color;
+  }
+}
+
+.btn-shop-now {
+  font-size: 10px;
+
+  i {
+    font-size: smaller;
+  }
+
+  @media only screen and (max-wdith: 900px) {
+    font-size: 7px;
+
+    i {
+      font-size: 5px;
+    }
+  }
+}
+
+.button-add-to-cart {
+  border: none;
+  background-color: color.$primary-color;
+  color: color.$white-color;
+  font-size: small;
+  border-radius: 4px;
+  padding: 8px 7px;
+  transition: 1s;
+
+  i {
+    font-size: x-small;
+  }
+
+  &:hover {
+    background-color: color.$primary-color-lighter;
+  }
+}
+
+.button-love-items {
+  border: 1px solid color.$primary-color;
+  background-color: color.$white-color;
+  padding: 0px 10px;
+  font-size: small;
+  height: 35px;
+  border-radius: 4px;
+  transition: 1s;
+
+  &:hover {
+    background-color: color.$primary-color-lighter;
+
+    i {
+      color: color.$white-color;
+    }
+  }
+
+  i {
+    color: color.$primary-color;
+  }
+}
+
+.add-to-cart {
+  border: none;
+  background-color: color.$primary-color;
+  color: color.$white-color;
+  border-radius: 4px;
+  padding: 8px 7px;
+  transition: 1s;
+
+  i {
+    font-size: small;
+  }
+
+  &:hover {
+    background-color: color.$primary-color-lighter;
+    color: color.$white-color;
+  }
+}
+
+.buy-item-wish {
+  border: 1px solid color.$primary-color;
+  background-color: color.$white-color;
+  padding: 0px 10px;
+  height: 40px;
+  border-radius: 4px;
+  transition: 1s;
+  color: color.$primary-color;
+
+  &:hover {
+    background-color: color.$primary-color-lighter;
+    color: color.$white-color;
+  }
+}

@@ -27,18 +27,66 @@
   font-size: small;
 }
 
-.input-auth {
-  width: 100%;
-  border-left: none;
-  border-right: none;
-  border-top: none;
-  padding: 10px 0;
-  border-bottom: 1px solid color.$light-color;
-  outline: none;
-  font-size: small;
+.form-floating {
+  position: relative;
 
-  &:hover,
-  &:focus {
-    border-bottom: 1px solid color.$primary-color-lighter;
+  .input-auth {
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+    padding-top: 10px;
+    height: 37px;
+    border-bottom: 1px solid color.$light-color;
+    outline: none;
+    font-size: small;
+    background-color: transparent;
+
+    &:focus ~ .label,
+    &:valid ~ .label {
+      top: -20px;
+      font-size: 16px;
+      color: #333;
+    }
+
+    &:focus ~ .underline,
+    &:valid ~ .underline {
+      transform: scaleX(1);
+    }
   }
+
+  .label {
+    position: absolute;
+    top: 0;
+    left: -10px;
+    color: color.$gray-two;
+    transition: all 0.3s ease;
+    pointer-events: none;
+  }
+
+  .underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: color.$secondary-color-darker;
+    transform: scaleX(0);
+    transition: all 0.3s ease;
+  }
+}
+
+.search-e-commerce {
+  font-size: 15px;
+  padding-left: 20px;
+  height: 40px;
+  width: 100%;
+}
+
+.main-search-e-commerce {
+  padding: 25px 30px;
+  border-radius: 50px;
+
+  // @media only screen and (max-width: 1000px) {
+  //   display: none;
+  // }
 }

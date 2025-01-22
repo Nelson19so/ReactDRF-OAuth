@@ -33,11 +33,13 @@ function Home() {
                 </p>
                 <center>
                   <div className="container-btn">
-                    <Button
-                      className="rounded-pill btn-landing-page btn mr-3"
-                      text="Shop Now"
-                      iconOne={true}
-                    />
+                    <Link to="/dashboard">
+                      <Button
+                        className="rounded-pill btn-landing-page btn mr-1"
+                        text="Shop Now"
+                        iconOne={true}
+                      />
+                    </Link>
 
                     <Link>
                       <Button

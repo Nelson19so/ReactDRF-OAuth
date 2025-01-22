@@ -3,3 +3,9 @@
 @use "./form" as form;
 
 @use "./navigation/blog/navigation" as navigation;
+
+@use "./headers/productheader" as header;
+
+@use "./navigation/e-commerce/navigationapp" as navigationapp;
+
+@use "./sidebar/sidebar" as sidebar;

@@ -47,7 +47,10 @@ export default function Smallscrnavigation({ navchange }) {
               <center>
                 <p className="text-muted">
                   Summer Sale For All Swim Suits And Free Express Delivery - OFF
-                  50%! <Link className="text-white ml-2">Shop Now</Link>
+                  50%!{" "}
+                  <Link to="/dasboard" className="text-white ml-2">
+                    Shop Now
+                  </Link>
                 </p>
               </center>
             </div>

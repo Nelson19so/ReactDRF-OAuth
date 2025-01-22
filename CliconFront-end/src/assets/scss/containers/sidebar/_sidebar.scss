@@ -1,0 +1,57 @@
+@use "../../Base/color" as color;
+
+aside {
+  left: 0;
+  background-color: color.$white-color;
+  width: 17%;
+  min-width: 240px;
+  position: relative;
+  transition: 1s;
+  max-width: 240px;
+  border-radius: 7px;
+
+  .container-aside {
+    width: 20%;
+    min-width: 280px;
+    // position: fixed;
+
+    @media only screen and (max-width: 1000px) {
+      padding-top: 20px;
+    }
+
+    ul {
+      margin-left: -25px;
+
+      p {
+        font-size: 18px;
+      }
+
+      li {
+        list-style: none;
+        margin-left: 4px;
+
+        a {
+          color: color.$black-color;
+          font-size: 13px;
+          display: block;
+          padding: 10px 10px;
+          text-decoration: none;
+          transition: 0.5s;
+          border-radius: 25px;
+          margin-bottom: 3px;
+          // box-shadow: 20px 20px 40px color.$light-color;
+
+          i {
+            color: color.$primary-color;
+            font-size: 15px;
+          }
+
+          .fa-chevron-right {
+            font-size: 10px;
+            color: color.$gray-two;
+          }
+        }
+      }
+    }
+  }
+}

@@ -3,21 +3,21 @@ export default function Button({
   text,
   iconOne,
   iconBtnNewsletter,
+  showSearch,
+  showLove,
+  showbasket,
+  onClick,
 }) {
   return (
     <>
-      <button className={className}>
-        {iconOne && (
-          <>
-            <i className="fa fa-shop mr-2"></i>
-          </>
+      <button className={className} onClick={onClick}>
+        {iconOne && <i className="fa fa-shop mr-1"></i>}
+        {text} {iconBtnNewsletter && <i className="fa fa-arrow-right"></i>}
+        {showSearch && (
+          <i className="fa fa-search p-0" style={{ fontSize: "smaller" }}></i>
         )}
-        {text}{" "}
-        {iconBtnNewsletter && (
-          <>
-            <i className="fa fa-arrow-right"></i>
-          </>
-        )}
+        {showbasket && <i className="fa fa-shopping-cart ml-1"></i>}
+        {showLove && <i className="fa fa-heart"></i>}
       </button>
     </>
   );

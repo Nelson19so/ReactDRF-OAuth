@@ -1,0 +1,54 @@
+@use "../../../Base/color" as color;
+
+.nav-app {
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 888;
+  background-color: color.$secondary-color;
+
+  .container-nav {
+    .logo-nav-app {
+      h4 {
+        font-family: cursive;
+      }
+    }
+
+    .search-bar {
+      width: 45%;
+      display: block;
+    }
+
+    .container-items-right {
+      display: none;
+
+      @media only screen and (max-width: 1000px) {
+        display: none;
+      }
+
+      h5 {
+        color: color.$primary-color;
+      }
+
+      .link-notifications {
+        text-decoration: none;
+
+        .fa-chevron-up,
+        .fa-chevron-down {
+          font-size: 10px;
+        }
+      }
+
+      .profile {
+        .container-profile {
+          width: 40px;
+          background-color: white;
+          height: 40px;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}

@@ -3,12 +3,16 @@
 .container-footer {
   bottom: 0;
   width: 100vw;
+  overflow: hidden;
   font-family: Monaco;
+  // position: relative;
 
   .container-- {
+    // position: absolute;
+
     .top-container {
       width: 100%;
-      background-color: color.$secondary-color-darker;
+      background-color: color.$secondary-color;
 
       center {
         p {

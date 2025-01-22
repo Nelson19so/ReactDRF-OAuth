@@ -42,7 +42,10 @@ export default function Navigation({ navchange }) {
               <center>
                 <p className="text-muted">
                   Summer Sale For All Swim Suits And Free Express Delivery - OFF
-                  50%! <Link className="text-white ml-2">Shop Now</Link>
+                  50%!{" "}
+                  <Link to="/dashboard" className="text-white ml-2">
+                    Shop Now
+                  </Link>
                 </p>
               </center>
             </div>
@@ -52,29 +55,31 @@ export default function Navigation({ navchange }) {
         <div className="container row mt-3">
           <div className="logo col-md-2">
             <strong>
-              <h3>Clicon</h3>
+              <Link to="/">
+                <h3 className="text-warning">Clicon</h3>
+              </Link>
             </strong>
           </div>
 
           <div className="link col-md-6">
             <div className="container">
               <ul className="d-flex justify-content-evenly">
-                <li className="float-left">
+                <li className="float-left mr-5">
                   <Link to="/" onClick={scrolltop}>
                     Home
                   </Link>
                 </li>
-                <li className="float-left">
+                <li className="float-left mr-5">
                   <a href="#about" onClick={scrolltop}>
                     About
                   </a>
                 </li>
-                <li className="float-left">
+                <li className="float-left mr-5">
                   <a href="#contact" onClick={scrolltop}>
                     Contact
                   </a>
                 </li>
-                <li className="float-left">
+                <li className="float-left mr-5">
                   <Link to="/signup" onClick={scrolltop}>
                     Signup
                   </Link>

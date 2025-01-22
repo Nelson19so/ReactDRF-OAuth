@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Dell Optiplex 7000x7 480 All-in-One Computer Monitor",
+    "price": "$432",
+    "withbutton": false,
+    "id": 1
+  },
+  {
+    "name": "Dell Optiplex 7000x7 480 All-in-One Computer Monitor",
+    "price": "$233",
+    "withbutton": false,
+    "id": 2
+  },
+  {
+    "name": "Dell Optiplex 7000x7 480 All-in-One Computer Monitor",
+    "price": "$677",
+    "withbutton": false,
+    "id": 3
+  },
+  {
+    "name": "Dell Optiplex 7000x7 480 All-in-One Computer Monitor",
+    "price": "$865",
+    "withbutton": false,
+    "id": 4
+  }
+]

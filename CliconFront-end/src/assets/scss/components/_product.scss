@@ -1,0 +1,89 @@
+@use "../Base/color" as color;
+
+center {
+  .card {
+    transition: 1s;
+    width: 24.4%;
+
+    @media only screen and (max-width: 500px) {
+      width: 48.7%;
+    }
+
+    @media only screen and (max-width: 902px) {
+      width: 32.7%;
+    }
+
+    @media only screen and (max-width: 700px) {
+      width: 48.4%;
+    }
+
+    &:hover {
+      box-shadow: 10px 10px 40px color.$light-color;
+    }
+
+    .card-body {
+      .container-name {
+        width: 100%;
+        // height: 25px;
+        // overflow: hidden;
+        font-size: 14px;
+      }
+      .text-info {
+        font-size: large;
+      }
+      .discount {
+        text-decoration: line-through;
+        font-size: smaller;
+      }
+    }
+  }
+}
+
+.container-items {
+  .grid {
+    padding-top: 100px;
+    .product-details {
+      .container-rating {
+        .stars {
+          color: color.$primary-color;
+        }
+        p {
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+      h5 {
+        font-size: x-large;
+        font-weight: 600;
+      }
+      .-model {
+        .container-items {
+          padding-right: 20%;
+
+          p {
+            font-size: small;
+
+            span {
+              font-size: larger;
+            }
+          }
+        }
+      }
+      .container- {
+        h2 {
+          span {
+            font-size: 18px;
+            margin-left: 15px;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+
+  .container-brandssame {
+    height: 320px;
+    overflow: hidden;
+  }
+}

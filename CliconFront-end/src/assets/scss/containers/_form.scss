@@ -20,3 +20,12 @@
     color: color.$primary-color-lighter;
   }
 }
+
+.bg-danger- {
+  background-color: color.$error-bg-color;
+}
+
+.bg-success- {
+  background-color: color.$success-bg-color;
+  color: color.$success-text-color;
+}

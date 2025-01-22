@@ -1,0 +1,25 @@
+@use "../../Base/color" as color;
+
+.header-product-root {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  // background-color: color.$primary-color;
+  padding: 10px 30px;
+  padding-bottom: 30px;
+  width: 100%;
+  color: color.$white-color;
+  height: 50px;
+
+  h4 {
+    font-size: 700;
+  }
+  span {
+    font-size: smaller;
+  }
+
+  h6 {
+    display: block;
+    border-radius: 4px;
+    width: 160px;
+  }
+}
