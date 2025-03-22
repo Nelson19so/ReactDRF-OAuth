@@ -70,12 +70,12 @@ export default function Navigation({ navchange }) {
                   </Link>
                 </li>
                 <li className="float-left mr-5">
-                  <a href="#about" onClick={scrolltop}>
+                  <a href="/#about" onClick={scrolltop}>
                     About
                   </a>
                 </li>
                 <li className="float-left mr-5">
-                  <a href="#contact" onClick={scrolltop}>
+                  <a href="/#contact" onClick={scrolltop}>
                     Contact
                   </a>
                 </li>

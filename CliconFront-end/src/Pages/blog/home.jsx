@@ -25,11 +25,10 @@ function Home() {
                 Shop Now With Clicon Online Store any where.
               </h1>
               <div className="mt-3">
-                <p className="text-white text-center pr-5 pl-5">
+                <p className="text-muted text-center pr-5 pl-5">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Doloremque, est? Facere nesciunt blanditiis ad quo optio
-                  ratione doloremque dolores quae! Lorem ipsum dolor sit amet
-                  consectetur adipisicing elit.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Necessitatibus, ea.
                 </p>
                 <center>
                   <div className="container-btn">
@@ -41,12 +40,12 @@ function Home() {
                       />
                     </Link>
 
-                    <Link>
+                    <a href="#about">
                       <Button
-                        className="rounded-pill btn-landing-page btn ml-3"
+                        className="rounded-pill btn-landing-page btn ml-2"
                         text="About Clicon"
                       />
-                    </Link>
+                    </a>
                   </div>
                 </center>
               </div>

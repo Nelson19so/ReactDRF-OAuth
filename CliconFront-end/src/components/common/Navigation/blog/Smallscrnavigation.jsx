@@ -36,7 +36,7 @@ export default function Smallscrnavigation({ navchange }) {
       <nav
         className={
           FixedNavbar
-            ? "blog_Nav pb-1 pt- sm-screen-nav"
+            ? "blog_Nav pb-3 pt- sm-screen-nav"
             : "navbar-expand pt-5 pb-5 sm-screen-nav"
         }
         ref={Navbar}
@@ -63,7 +63,7 @@ export default function Smallscrnavigation({ navchange }) {
               <h3>Clicon</h3>
             </strong>
             <button className="btn" onClick={handleshowitems}>
-              <h1>=</h1>
+              <i className="fa fa-bars"></i>
             </button>
           </div>
 
@@ -72,18 +72,18 @@ export default function Smallscrnavigation({ navchange }) {
               <div className="link col-lg">
                 <div className="container-">
                   <ul>
-                    <li>
+                    <li className="mb-3 w-100">
                       <Link to="/" onClick={scrolltop}>
                         Home
                       </Link>
                     </li>
-                    <li>
+                    <li className="mb-3 w-100">
                       <Link onClick={scrolltop}>About</Link>
                     </li>
-                    <li>
+                    <li className="mb-3 w-100">
                       <Link onClick={scrolltop}>Contact</Link>
                     </li>
-                    <li>
+                    <li className="mb-3 w-100">
                       <Link to="/signup" onClick={scrolltop}>
                         Signup
                       </Link>

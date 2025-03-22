@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import teamOne from "../../../images/Staffs/team-2.jpg";
 import teamTwo from "../../../images/Staffs/team-3.jpg";
 import teamFour from "../../../images/Staffs/team-4.jpg";
@@ -14,9 +16,15 @@ function Team() {
                 <h3>Tom cruise</h3>
                 <p className="text-muted">Founder & chairman</p>
                 <span>
-                  <i className="fa fa-instagram"></i>
-                  <i className="fa fa-linkedin ml-2"></i>
-                  <i className="fa fa-twitter ml-2"></i>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-instagram"></i>
+                  </Link>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-linkedin ml-2"></i>
+                  </Link>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-twitter ml-2"></i>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -27,9 +35,15 @@ function Team() {
                 <h3>Tom cruise</h3>
                 <p className="text-muted">Founder & chairman</p>
                 <span>
-                  <i className="fa fa-instagram"></i>
-                  <i className="fa fa-linkedin ml-2"></i>
-                  <i className="fa fa-twitter ml-2"></i>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-instagram"></i>
+                  </Link>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-linkedin ml-2"></i>
+                  </Link>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-twitter ml-2"></i>
+                  </Link>
                 </span>
               </div>
             </div>
@@ -40,9 +54,15 @@ function Team() {
                 <h3>Tom cruise</h3>
                 <p className="text-muted">Founder & chairman</p>
                 <span>
-                  <i className="fa fa-instagram"></i>
-                  <i className="fa fa-linkedin ml-2"></i>
-                  <i className="fa fa-twitter ml-2"></i>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-instagram"></i>
+                  </Link>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-linkedin ml-2"></i>
+                  </Link>
+                  <Link className="text-dark mr-2">
+                    <i className="fa fa-twitter ml-2"></i>
+                  </Link>
                 </span>
               </div>
             </div>

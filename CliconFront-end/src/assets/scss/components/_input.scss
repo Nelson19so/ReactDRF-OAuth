@@ -24,7 +24,7 @@
 }
 
 .search-navbar-btn {
-  font-size: small;
+  font-size: 14px;
 }
 
 .form-floating {
@@ -38,7 +38,7 @@
     height: 37px;
     border-bottom: 1px solid color.$light-color;
     outline: none;
-    font-size: small;
+    // font-size: small;
     background-color: transparent;
 
     &:focus ~ .label,
@@ -73,20 +73,4 @@
     transform: scaleX(0);
     transition: all 0.3s ease;
   }
-}
-
-.search-e-commerce {
-  font-size: 15px;
-  padding-left: 20px;
-  height: 40px;
-  width: 100%;
-}
-
-.main-search-e-commerce {
-  padding: 25px 30px;
-  border-radius: 50px;
-
-  // @media only screen and (max-width: 1000px) {
-  //   display: none;
-  // }
 }

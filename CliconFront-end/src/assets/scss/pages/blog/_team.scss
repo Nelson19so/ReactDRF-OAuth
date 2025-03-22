@@ -7,6 +7,12 @@
         .container {
           img {
             width: 100%;
+            transition: 1s;
+
+            &:hover {
+              width: 110%;
+              margin-left: -5%;
+            }
           }
         }
       }

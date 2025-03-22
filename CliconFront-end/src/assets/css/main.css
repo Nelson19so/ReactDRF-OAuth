@@ -38,6 +38,7 @@ html::-webkit-scrollbar-thumb:hover {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100vh;
 }
 .main-container .container-home .back-drop {
   width: 100%;
@@ -49,16 +50,26 @@ html::-webkit-scrollbar-thumb:hover {
 }
 @media only screen and (max-width: 600px) {
   .main-container .container-home .back-drop {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .main-container .container-home .back-drop h1 {
   font-size: 60px;
   font-family: "Times New Roman", Times, serif;
 }
+@media only screen and (max-width: 600px) {
+  .main-container .container-home .back-drop h1 {
+    font-size: 40px;
+  }
+}
 .main-container .container-home .back-drop .container-btn {
   margin-top: 5%;
+}
+@media only screen and (max-width: 600px) {
+  .main-container .container-home .back-drop .container-btn {
+    margin-top: 10%;
+  }
 }
 
 .container-items-about {
@@ -121,6 +132,11 @@ html::-webkit-scrollbar-thumb:hover {
 }
 .container-tam .container .grid .container-inner-grid .container img {
   width: 100%;
+  transition: 1s;
+}
+.container-tam .container .grid .container-inner-grid .container img:hover {
+  width: 110%;
+  margin-left: -5%;
 }
 
 .contact-page .container .mini-breacrumb {
@@ -348,7 +364,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .search-navbar-btn {
-  font-size: small;
+  font-size: 14px;
 }
 
 .form-floating {
@@ -362,7 +378,6 @@ html::-webkit-scrollbar-thumb:hover {
   height: 37px;
   border-bottom: 1px solid rgb(185, 189, 192);
   outline: none;
-  font-size: small;
   background-color: transparent;
 }
 .form-floating .input-auth:focus ~ .label, .form-floating .input-auth:valid ~ .label {
@@ -390,18 +405,6 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: #1b6392;
   transform: scaleX(0);
   transition: all 0.3s ease;
-}
-
-.search-e-commerce {
-  font-size: 15px;
-  padding-left: 20px;
-  height: 40px;
-  width: 100%;
-}
-
-.main-search-e-commerce {
-  padding: 25px 30px;
-  border-radius: 50px;
 }
 
 center .card {
@@ -475,6 +478,7 @@ center .card .card-body .discount {
   width: 100vw;
   overflow: hidden;
   font-family: Monaco;
+  text-align: left;
 }
 .container-footer .container-- .top-container {
   width: 100%;
@@ -590,7 +594,7 @@ center .card .card-body .discount {
   text-decoration: underline;
 }
 .blog_Nav .container {
-  padding-left: 90px;
+  padding-left: 40px;
   padding-right: 10px;
 }
 .blog_Nav .container .link .container ul li,
@@ -650,47 +654,6 @@ nav .container .search div {
   display: block;
   border-radius: 4px;
   width: 160px;
-}
-
-.nav-app {
-  width: 100vw;
-  top: 0;
-  left: 0;
-  right: 0;
-  position: fixed;
-  z-index: 888;
-  background-color: #2484c2;
-}
-.nav-app .container-nav .logo-nav-app h4 {
-  font-family: cursive;
-}
-.nav-app .container-nav .search-bar {
-  width: 45%;
-  display: block;
-}
-.nav-app .container-nav .container-items-right {
-  display: none;
-}
-@media only screen and (max-width: 1000px) {
-  .nav-app .container-nav .container-items-right {
-    display: none;
-  }
-}
-.nav-app .container-nav .container-items-right h5 {
-  color: #fa8232;
-}
-.nav-app .container-nav .container-items-right .link-notifications {
-  text-decoration: none;
-}
-.nav-app .container-nav .container-items-right .link-notifications .fa-chevron-up,
-.nav-app .container-nav .container-items-right .link-notifications .fa-chevron-down {
-  font-size: 10px;
-}
-.nav-app .container-nav .container-items-right .profile .container-profile {
-  width: 40px;
-  background-color: white;
-  height: 40px;
-  border-radius: 100px;
 }
 
 aside {

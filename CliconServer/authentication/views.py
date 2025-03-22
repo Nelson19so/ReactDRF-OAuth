@@ -27,8 +27,6 @@ class RegistrationSerializerCreateView(generics.ListCreateAPIView):
     user = User.objects.create_user(username, email, password)
     return Response({'message': 'User signed up successfully'}, status=status.HTTP_201_CREATED)
 
-
-
 class RegistrationRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
   queryset = User.objects.all()
   serializer_class = UserSerializer
@@ -40,7 +38,7 @@ class LoginView(APIView):
   def post(self, request):
     serializer = LoginSerializer(data=request.data)
     if serializer.is_valid():
-      username = request.data.get('username')
+      username = request.data.get('username').lower()
       password = request.data.get('password')
 
       user = authenticate(request, username=username, password=password)
@@ -51,5 +49,5 @@ class LoginView(APIView):
         return Response({'message':'Logged in successfuly', 'logged_in_users': 
         {'username': logged_in_users.username, 'email': logged_in_users.email}})
       
-      return Response({"message": 'invalid crdentials'})
+      return Response({"error": 'invalid credentials :('}, status=status.HTTP_404_NOT_FOUND)
   

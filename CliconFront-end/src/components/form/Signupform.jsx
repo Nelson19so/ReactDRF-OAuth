@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../common/buttons/Button";
 import Input from "../common/input/Input";
 import { Link } from "react-router-dom";
+import Errormsg from "../message/Errormsg";
+import Successmsg from "../message/Successmsg";
 
 export default function Signupform() {
   const [username, setUsername] = useState("");
@@ -10,30 +12,36 @@ export default function Signupform() {
   const [cpassword, setCPassword] = useState("");
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState("");
+  const [loading, setIsloading] = useState(false);
 
   const closeMsg = () => setError(null);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsloading(true);
 
     if (password !== cpassword) {
       setError("passwords do not match");
       console.log("passwords do not match");
+      setIsloading(false);
       return;
     }
 
     if (!username) {
       setError("Username is required");
+      setIsloading(false);
       return;
     }
 
     if (!email) {
       setError("email is required");
+      setIsloading(false);
       return;
     }
 
     if (!password) {
       setError("password is required");
+      setIsloading(false);
       return;
     }
 
@@ -53,47 +61,42 @@ export default function Signupform() {
         console.log(data);
         setSuccess(data["message"]);
         setError(null);
+        setIsloading(false);
       } else {
         // User already exists
         setError(data["error"]);
         console.log(data["error"]);
+        setSuccess("");
       }
     } catch (error) {
-      setError("An error occurred");
+      setError("Server error, please try again later.");
+      setIsloading(false);
     }
   };
+
+  useEffect(() => {}, []);
 
   return (
     <>
       <div className="container-auth">
         <>
+          {/* error message */}
           {error && (
-            <span className="badge bg-danger- text-danger center p-3 text-center msg-auth">
-              {error}{" "}
-              <button
-                className="btn-close ml-5 float-right"
-                onClick={closeMsg}
-              ></button>
-            </span>
+            <>
+              <Errormsg error={error} closeMsg={closeMsg} />{" "}
+            </>
           )}
 
+          {/* success message */}
           {success && (
-            <span className="badge bg-success- center p-3 text-center msg-auth">
-              {success}
-            </span>
+            <>
+              <Successmsg success={success} />
+            </>
           )}
 
-          {/* {error.data && <p>{error.data}</p>} */}
-
-          <form
-            action=""
-            // method="Post"
-            className="auth"
-            onSubmit={handleSubmit}
-          >
+          <form className="auth" onSubmit={handleSubmit}>
             <div className="form-floating mb-3 mt-3">
               <Input
-                // placeholder="Username"
                 className="form-control- input-auth"
                 value={username}
                 onChange={(event) => setUsername(event.target.value)}
@@ -150,6 +153,8 @@ export default function Signupform() {
 
             <div className="submit-login">
               <Button
+                loading={loading}
+                setIsloading={setIsloading}
                 text="Create Account"
                 className="btn btn-submit-auth w-100 text-white"
               />
