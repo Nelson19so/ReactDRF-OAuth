@@ -46,27 +46,41 @@ export default function Signupform() {
     }
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/user/register/", {
+      const response = await fetch("http://127.0.0.1:8000/auth/registration/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ username, email, password }),
+        body: JSON.stringify({
+          username,
+          email,
+          password1: password,
+          password2: cpassword,
+        }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        // User created successfully
-        console.log(data);
-        setSuccess(data["message"]);
-        setError(null);
+        setSuccess("Registration successful!");
+        console.log("Token:", data["key"]);
+        // Optionally store in localStorage:
+        localStorage.setItem("authToken", data["key"]);
+        setError("");
         setIsloading(false);
       } else {
         // User already exists
-        setError(data["error"]);
+        console.log("Registration failed:", data); // LOG FULL MESSAGE
+        setError(
+          data?.non_field_errors?.[0] ||
+            data?.email?.[0] ||
+            data?.username?.[0] ||
+            data?.password1?.[0] ||
+            "Registration failed"
+        );
         console.log(data["error"]);
         setSuccess("");
+        setIsloading(false);
       }
     } catch (error) {
       setError("Server error, please try again later.");

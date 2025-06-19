@@ -19,7 +19,7 @@ export default function Loginform() {
     setIsloading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/user/login/", {
+      const response = await fetch("http://127.0.0.1:8000/auth/login/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -30,13 +30,22 @@ export default function Loginform() {
       const data = await response.json();
 
       if (response.ok) {
-        setSuccess(data["message"]);
-        console.log(data["message"]);
+        setSuccess("Login successful!");
+        console.log("Token:", data["key"]);
+        // Optionally store in localStorage:
+        localStorage.setItem("authToken", data["key"]);
         setError("");
+        setIsloading(false);
       } else {
-        setError(data["error"]);
-        console.log(data["error"]);
+        setError(
+          data?.non_field_errors?.[0] ||
+            data?.email?.[0] ||
+            data?.username?.[0] ||
+            data?.password1?.[0] ||
+            "Registration failed"
+        );
         setSuccess("");
+        setIsloading(false);
       }
     } catch (error) {
       setError("Server error, please try again later.");
