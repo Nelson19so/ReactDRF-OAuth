@@ -30,15 +30,15 @@ A Django REST Framework-based authentication system with a custom user model usi
 
 ## 📁 Project Structure
 
-drfr_auth/
+DEF-OAUTH/
 ├── authentication/ # Custom app for user auth
 │ ├── models.py # Custom user model (email login)
 │ ├── serializers.py # Register/Login serializers
 │ ├── views.py # Optional custom views
 │ └── forms.py # Django Forms (for admin use)
-├── drfr_auth/ # Django root
+├── core/ # Django root
 │ └── settings.py # Backend configuration
-├── frontend/ # React frontend folder
+├── REACT-OAuth/ # React frontend folder
 
 yaml
 Copy
