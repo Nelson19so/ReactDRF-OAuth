@@ -29,7 +29,7 @@ A Django REST Framework-based authentication system with a custom user model usi
 ---
 
 ## 📁 Project Structure
-
+```
 DEF-OAUTH/
 ├── authentication/ # Custom app for user auth
 │ ├── models.py # Custom user model (email login)
@@ -40,9 +40,11 @@ DEF-OAUTH/
 │ └── settings.py # Backend configuration
 ├── REACT-OAuth/ # React frontend folder
 
+
 yaml
 Copy
 Edit
+```
 
 ---
 
