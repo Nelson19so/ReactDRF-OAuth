@@ -53,51 +53,81 @@ Edit
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/drfr_auth.git
-cd drfr_auth
-2. Backend Setup
-✅ Create a virtual environment:
+https://github.com/Nelson19so/ReactDRF-OAuth.git
+cd ReactDRF-OAurh
+``` 
+### 2. Backend Setup
+
+
+- ✅ Create a virtual environment:
+```bash
 bash
 Copy
 Edit
+
 python -m venv env
 source env/bin/activate  # Windows: env\Scripts\activate
-✅ Install requirements:
+```
+
+
+- ✅ Install requirements:
+```bash
 bash
 Copy
 Edit
+
 pip install -r requirements.txt
-✅ Add .env:
+```
+
+- ✅ Add .env:
+```
 env
 Copy
 Edit
+
 SECRET_KEY=your-secret-key
 DEBUG=True
 ALLOWED_HOSTS=127.0.0.1,localhost
 
 DATABASE_URL=sqlite:///db.sqlite3
-✅ Run migrations:
+```
+
+- ✅ Run migrations:
+```bash
 bash
 Copy
 Edit
+
 python manage.py makemigrations
 python manage.py migrate
-✅ Start the backend server:
+```
+
+- ✅ Start the backend server:
+```bash
 bash
 Copy
 Edit
+
 python manage.py runserver
-🌐 API Endpoints
+```
+
+- 🌐 API Endpoints
 Method	Endpoint	Description
+```bash
 POST	/auth/registration/	Register a new user
 POST	/auth/login/	Login user
 POST	/auth/logout/	Logout user
+```
 
-💻 React Frontend Integration (fetch())
-🔐 Register User
+
+### 💻 React Frontend Integration (fetch())
+
+- 🔐 Register User
+```bash
 js
 Copy
 Edit
+
 fetch("http://127.0.0.1:8000/auth/registration/", {
   method: "POST",
   headers: {
@@ -120,10 +150,15 @@ fetch("http://127.0.0.1:8000/auth/registration/", {
       console.log("Error:", data);
     }
   });
-🔑 Login User
+```
+
+
+- 🔑 Login User
+```bash
 js
 Copy
 Edit
+
 fetch("http://127.0.0.1:8000/auth/login/", {
   method: "POST",
   headers: {
@@ -143,36 +178,44 @@ fetch("http://127.0.0.1:8000/auth/login/", {
       console.log("Login failed:", data);
     }
   });
-🚪 Logout User
+```
+
+
+- 🚪 Logout User
+```bash
 js
 Copy
 Edit
+
 fetch("http://127.0.0.1:8000/auth/logout/", {
   method: "POST",
   headers: {
     Authorization: `Token ${localStorage.getItem("authToken")}`,
   },
 });
-🧠 Notes
+``` 
+
+
+- 🧠 Notes
 Backend requires fields like Name, email, password1, password2, terms_accepted
 
-Custom user model uses email as the login field
+- Custom user model uses email as the login field
 
-Passwords must match and meet Django password validators
+- Passwords must match and meet Django password validators
 
-JWT support can be added with dj-rest-auth[jwt]
+- JWT support can be added with dj-rest-auth[jwt]
 
-✅ TODO
+- ✅ TODO
  Add JWT authentication
 
- Add email verification (with SendGrid or console backend)
+- Add email verification (with SendGrid or console backend)
 
- Deploy on Render / Vercel
+Deploy on Render / Vercel
 
-🧑‍💻 Author
-Nelson Junior
+### 🧑‍💻 Author
+- Nelson Junior
 
-GitHub: @Nelson19so
+- GitHub: @Nelson19so
 
-LinkedIn: Nelson Junior
-```
+- LinkedIn: Nelson Junior
+
